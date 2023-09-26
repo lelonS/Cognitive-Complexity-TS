@@ -8,10 +8,10 @@ const DEV_MODE = !!process.env["DEV"];
 
 const sourcePath = __dirname + "/../../..";
 
-const cssPath =       path.normalize(sourcePath + "/ui/ts");
+const cssPath = path.normalize(sourcePath + "/ui/ts");
 const indexFilePath = path.normalize(sourcePath + "/ui/html/index.html");
-const jsPath =        path.normalize(sourcePath + "/build/ui/ts");
-const tsPath =        path.normalize(sourcePath);
+const jsPath = path.normalize(sourcePath + "/build/ui/ts");
+const tsPath = path.normalize(sourcePath);
 
 export function createUiServer(combinedOutputsJson: string): http.Server {
     return http.createServer(async (req, res) => {

@@ -1,5 +1,4 @@
 import minimist from "minimist";
-import open from "open";
 import { nonNaN, keysToAsyncValues } from "./util/util";
 import { getFileOrFolderOutput } from "./cognitive-complexity/output";
 import { createUiServer } from "./ui-server/ui-server";
@@ -33,7 +32,6 @@ async function main() {
     const server = createUiServer(combinedOutputsJson);
     server.listen(port, () => {
         console.log(`Server started at ${url}`);
-        open(url);
     });
 }
 

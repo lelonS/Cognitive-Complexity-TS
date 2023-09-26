@@ -59,7 +59,7 @@ function arrowFunction(node: ts.ArrowFunction): DepthOfChildren {
     const children = node.getChildren();
 
     // aggregate code inside SyntaxList
-    const same = children.slice(1,-1);
+    const same = children.slice(1, -1);
     // aggregate code inside arrow function
     const below = [children[children.length - 1]];
 
@@ -153,7 +153,7 @@ function forLikeStatement(node: ForLikeStatement): DepthOfChildren {
 function functionDeclaration(node: ts.FunctionDeclaration): DepthOfChildren {
     const children = node.getChildren();
 
-    const same = children.slice(1,-1);
+    const same = children.slice(1, -1);
     const below = [children[children.length - 1]];
 
     return {
